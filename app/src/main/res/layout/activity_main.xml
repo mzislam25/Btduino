@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#93bfd6"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:drawable/alert_light_frame"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#86bfd3"
+            android:text="Paired Devices"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listDevice"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#86bfd3"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@android:color/white"
+        android:padding="0dp"
+        android:visibility="visible">
+
+        <ToggleButton
+            android:id="@+id/btnStart"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_start"
+            android:textOff=""
+            android:textOn="" />
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/btnUp"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btnStart"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp"
+            android:background="@drawable/arrow_up0" />
+
+        <Button
+            android:id="@+id/btnDown"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_alignLeft="@+id/btnUp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/btnUp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/arrow_down0" />
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_alignEnd="@+id/btnStart"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btnLeft"
+            android:layout_marginBottom="77dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/arrow_right0" />
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="100dp"
+            android:layout_height="95dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnRight"
+            android:layout_marginEnd="152dp"
+            android:layout_marginRight="152dp"
+            android:background="@drawable/arrow_left0" />
+
+        <Button
+            android:id="@+id/btnHorn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnStart"
+            android:layout_marginEnd="195dp"
+            android:layout_marginRight="195dp"
+            android:background="@drawable/horn0" />
+
+        <ToggleButton
+            android:id="@+id/btnLight"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnStart"
+            android:layout_marginEnd="133dp"
+            android:layout_marginRight="133dp"
+            android:background="@drawable/btn_light"
+            android:textOff=""
+            android:textOn="" />
+
+        <SeekBar
+            android:id="@+id/speedBar"
+            android:layout_width="298dp"
+            android:layout_height="47dp"
+            android:layout_alignLeft="@+id/btnUp"
+            android:layout_alignStart="@+id/btnUp"
+            android:layout_alignTop="@+id/btnStart"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginStart="-20dp"
+            android:max="10"
+            android:min="0"
+            android:progress="2"
+            android:progressDrawable="@drawable/progress"
+            android:thumb="@drawable/thumb" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnUp"
+            android:layout_alignStart="@+id/btnUp"
+            android:layout_below="@+id/btnHorn"
+            android:text="Speed 20%"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <ToggleButton
+            android:id="@+id/btnBrake"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/btnRight"
+            android:layout_alignEnd="@+id/switch1"
+            android:layout_alignRight="@+id/switch1"
+            android:background="@drawable/btn_brake"
+            android:textOff=""
+            android:textOn="" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="52dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="203dp"
+            android:layout_marginStart="203dp"
+            android:background="#93bfd6" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/switch1"
+            android:layout_alignLeft="@+id/switch1"
+            android:layout_alignStart="@+id/switch1"
+            android:text="Start"
+            android:textColor="@android:color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnDown"
+            android:layout_alignLeft="@+id/btnBrake"
+            android:layout_alignStart="@+id/btnBrake"
+            android:text="Handbrake"
+            android:textColor="@android:color/black"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

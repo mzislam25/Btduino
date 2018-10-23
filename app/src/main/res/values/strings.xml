@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Btduino</string>
+    <string name="btn_disconnect">Disconnect</string>
+    <string name="btn_connect">Connect</string>
+</resources>
